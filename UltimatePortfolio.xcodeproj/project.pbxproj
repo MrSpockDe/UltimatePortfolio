@@ -13,6 +13,7 @@
 		501063BE2AD1715F00AE10F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501063BD2AD1715F00AE10F1 /* Preview Assets.xcassets */; };
 		501063C62AD18E1200AE10F1 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 501063C42AD18E1200AE10F1 /* Main.xcdatamodeld */; };
 		501063C82AD191A000AE10F1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501063C72AD191A000AE10F1 /* DataController.swift */; };
+		5037A38A2AD5DB3800B3DD7F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5037A3892AD5DB3800B3DD7F /* README.md */; };
 		50813E9A2AD484FF00483464 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50813E992AD484FF00483464 /* SidebarView.swift */; };
 		50813E9C2AD4851B00483464 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50813E9B2AD4851B00483464 /* DetailView.swift */; };
 		50813E9E2AD4881800483464 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50813E9D2AD4881800483464 /* Filter.swift */; };
@@ -28,6 +29,7 @@
 		501063C52AD18E1200AE10F1 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		501063C72AD191A000AE10F1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		501063C92AD1A3F900AE10F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5037A3892AD5DB3800B3DD7F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = UltimatePortfolio/README.md; sourceTree = SOURCE_ROOT; };
 		50813E992AD484FF00483464 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		50813E9B2AD4851B00483464 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		50813E9D2AD4881800483464 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				501063C72AD191A000AE10F1 /* DataController.swift */,
 				501063B92AD1715F00AE10F1 /* Assets.xcassets */,
 				501063BB2AD1715F00AE10F1 /* UltimatePortfolio.entitlements */,
+				5037A3892AD5DB3800B3DD7F /* README.md */,
 				501063BC2AD1715F00AE10F1 /* Preview Content */,
 			);
 			path = UltimatePortfolio;
@@ -144,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5037A38A2AD5DB3800B3DD7F /* README.md in Resources */,
 				501063BE2AD1715F00AE10F1 /* Preview Assets.xcassets in Resources */,
 				501063BA2AD1715F00AE10F1 /* Assets.xcassets in Resources */,
 			);
