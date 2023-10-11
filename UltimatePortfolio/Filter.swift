@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Filter is used to store the values for a "smart mailbox" function
+// Filter is used to store the values for a "smart mailbox" function or a tag filter
 struct Filter: Identifiable, Hashable {
     var id: UUID
     var name: String

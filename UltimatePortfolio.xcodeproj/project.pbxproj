@@ -13,6 +13,9 @@
 		501063BE2AD1715F00AE10F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501063BD2AD1715F00AE10F1 /* Preview Assets.xcassets */; };
 		501063C62AD18E1200AE10F1 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 501063C42AD18E1200AE10F1 /* Main.xcdatamodeld */; };
 		501063C82AD191A000AE10F1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501063C72AD191A000AE10F1 /* DataController.swift */; };
+		50237D052AD7240A00E97BC1 /* Issue-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50237D042AD7240A00E97BC1 /* Issue-CoreDataHelpers.swift */; };
+		50237D072AD724AF00E97BC1 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50237D062AD724AF00E97BC1 /* Tag-CoreDataHelpers.swift */; };
+		50237D092AD735C300E97BC1 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50237D082AD735C300E97BC1 /* IssueRow.swift */; };
 		5037A38A2AD5DB3800B3DD7F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5037A3892AD5DB3800B3DD7F /* README.md */; };
 		50813E9A2AD484FF00483464 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50813E992AD484FF00483464 /* SidebarView.swift */; };
 		50813E9C2AD4851B00483464 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50813E9B2AD4851B00483464 /* DetailView.swift */; };
@@ -29,6 +32,9 @@
 		501063C52AD18E1200AE10F1 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		501063C72AD191A000AE10F1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		501063C92AD1A3F900AE10F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		50237D042AD7240A00E97BC1 /* Issue-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		50237D062AD724AF00E97BC1 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		50237D082AD735C300E97BC1 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 		5037A3892AD5DB3800B3DD7F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = UltimatePortfolio/README.md; sourceTree = SOURCE_ROOT; };
 		50813E992AD484FF00483464 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		50813E9B2AD4851B00483464 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -67,8 +73,11 @@
 			children = (
 				501063C92AD1A3F900AE10F1 /* Info.plist */,
 				501063B52AD1715D00AE10F1 /* UltimatePortfolioApp.swift */,
+				50237D082AD735C300E97BC1 /* IssueRow.swift */,
 				50813E9D2AD4881800483464 /* Filter.swift */,
 				50813E992AD484FF00483464 /* SidebarView.swift */,
+				50237D042AD7240A00E97BC1 /* Issue-CoreDataHelpers.swift */,
+				50237D062AD724AF00E97BC1 /* Tag-CoreDataHelpers.swift */,
 				501063B72AD1715D00AE10F1 /* ContentView.swift */,
 				50813E9B2AD4851B00483464 /* DetailView.swift */,
 				501063C42AD18E1200AE10F1 /* Main.xcdatamodeld */,
@@ -161,11 +170,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				50813E9E2AD4881800483464 /* Filter.swift in Sources */,
+				50237D072AD724AF00E97BC1 /* Tag-CoreDataHelpers.swift in Sources */,
 				501063C62AD18E1200AE10F1 /* Main.xcdatamodeld in Sources */,
+				50237D052AD7240A00E97BC1 /* Issue-CoreDataHelpers.swift in Sources */,
 				50813E9C2AD4851B00483464 /* DetailView.swift in Sources */,
 				501063C82AD191A000AE10F1 /* DataController.swift in Sources */,
 				50813E9A2AD484FF00483464 /* SidebarView.swift in Sources */,
 				501063B82AD1715D00AE10F1 /* ContentView.swift in Sources */,
+				50237D092AD735C300E97BC1 /* IssueRow.swift in Sources */,
 				501063B62AD1715D00AE10F1 /* UltimatePortfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
