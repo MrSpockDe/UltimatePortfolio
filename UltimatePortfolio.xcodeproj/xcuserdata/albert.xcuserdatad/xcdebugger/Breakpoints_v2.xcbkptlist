@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6F6050B1-F0CA-474D-A99B-8700380388BE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C6D745C-A2DB-4458-AF60-469048F63639"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UltimatePortfolio/IssueView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "7C6D745C-A2DB-4458-AF60-469048F63639 - 3b802a53d9dffe7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of UltimatePortfolio.Issue.issueStatus : some&gt;&gt;.0)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.pickerStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PickerStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.Menu&lt;&lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of UltimatePortfolio.Issue.issueStatus : some&gt;&gt;.0)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.pickerStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PickerStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.Menu&lt;&lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt;&gt;)&gt;, SwiftUI.EmptyView&gt;, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.TextField&lt;SwiftUI.Text&gt;)&gt;&gt;, SwiftUI.EmptyView&gt;)&gt; in UltimatePortfolio.IssueView.body.getter : some"
+                  moduleName = "UltimatePortfolio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albert/XCodeProjects/UltimatePortfolio/UltimatePortfolio/IssueView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1802">
+               </Location>
+               <Location
+                  uuid = "7C6D745C-A2DB-4458-AF60-469048F63639 - 37bee45710c9b81a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of UltimatePortfolio.Issue.issueStatus : some&gt;&gt;.0)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.pickerStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PickerStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.Menu&lt;&lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of UltimatePortfolio.Issue.issueStatus : some&gt;&gt;.0)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.pickerStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PickerStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.Menu&lt;&lt;&lt;opaque return type of SwiftUI.View.animation&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(_: Swift.Optional&lt;SwiftUI.Animation&gt;, value: &#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Label&lt;SwiftUI.Text, SwiftUI.Image&gt;&gt;&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;UltimatePortfolio.Tag&gt;, Swift.Optional&lt;Foundation.UUID&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt;&gt;)&gt;, SwiftUI.EmptyView&gt;, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.TextField&lt;SwiftUI.Text&gt;)&gt;&gt;, SwiftUI.EmptyView&gt;)&gt; in UltimatePortfolio.IssueView.body.getter : some"
+                  moduleName = "UltimatePortfolio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albert/XCodeProjects/UltimatePortfolio/UltimatePortfolio/IssueView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "539">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB1E1D22-1956-4799-A86D-4A74A9AE0019"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UltimatePortfolio/DataController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "suggestedFilterTokens"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3448024-3879-4230-B073-D21EE73E0B44"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UltimatePortfolio/DataController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "suggestedFilterTokens"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26199417-5EEB-4CAA-93B9-E8A4C0090808"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UltimatePortfolio/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "26199417-5EEB-4CAA-93B9-E8A4C0090808 - 7292a5b053b2cad1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UltimatePortfolio.ContentView.body.getter : some"
+                  moduleName = "UltimatePortfolio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albert/XCodeProjects/UltimatePortfolio/UltimatePortfolio/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "855">
+               </Location>
+               <Location
+                  uuid = "26199417-5EEB-4CAA-93B9-E8A4C0090808 - 899185dccf94d3d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (UltimatePortfolio.Tag) -&gt; SwiftUI.Text in UltimatePortfolio.ContentView.body.getter : some"
+                  moduleName = "UltimatePortfolio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albert/XCodeProjects/UltimatePortfolio/UltimatePortfolio/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F3BB101-CD7F-4AC9-A9E4-47291E91EC48"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UltimatePortfolio/DataController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "suggestedFilterTokens"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1F3BB101-CD7F-4AC9-A9E4-47291E91EC48 - 6f2293ba128e52f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UltimatePortfolio.DataController.suggestedFilterTokens.getter : Swift.Array&lt;UltimatePortfolio.Tag&gt;"
+                  moduleName = "UltimatePortfolio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albert/XCodeProjects/UltimatePortfolio/UltimatePortfolio/DataController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "559">
+               </Location>
+               <Location
+                  uuid = "1F3BB101-CD7F-4AC9-A9E4-47291E91EC48 - 6f2293ba128e52f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UltimatePortfolio.DataController.suggestedFilterTokens.getter : Swift.Array&lt;UltimatePortfolio.Tag&gt;"
+                  moduleName = "UltimatePortfolio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/albert/XCodeProjects/UltimatePortfolio/UltimatePortfolio/DataController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "624">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CEDC0F5E-ABFD-4221-AFC3-927F76C52E07"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UltimatePortfolio/DataController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "suggestedFilterTokens"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

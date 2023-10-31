@@ -20,6 +20,8 @@
 		50813E9A2AD484FF00483464 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50813E992AD484FF00483464 /* SidebarView.swift */; };
 		50813E9C2AD4851B00483464 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50813E9B2AD4851B00483464 /* DetailView.swift */; };
 		50813E9E2AD4881800483464 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50813E9D2AD4881800483464 /* Filter.swift */; };
+		50EC76612ADB2A5A004A14F9 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC76602ADB2A5A004A14F9 /* IssueView.swift */; };
+		50EC76632ADB2A67004A14F9 /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC76622ADB2A67004A14F9 /* NoIssueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		50813E992AD484FF00483464 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		50813E9B2AD4851B00483464 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		50813E9D2AD4881800483464 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		50EC76602ADB2A5A004A14F9 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
+		50EC76622ADB2A67004A14F9 /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			children = (
 				501063C92AD1A3F900AE10F1 /* Info.plist */,
 				501063B52AD1715D00AE10F1 /* UltimatePortfolioApp.swift */,
+				501063C72AD191A000AE10F1 /* DataController.swift */,
 				50237D082AD735C300E97BC1 /* IssueRow.swift */,
 				50813E9D2AD4881800483464 /* Filter.swift */,
 				50813E992AD484FF00483464 /* SidebarView.swift */,
@@ -80,8 +85,9 @@
 				50237D062AD724AF00E97BC1 /* Tag-CoreDataHelpers.swift */,
 				501063B72AD1715D00AE10F1 /* ContentView.swift */,
 				50813E9B2AD4851B00483464 /* DetailView.swift */,
+				50EC76602ADB2A5A004A14F9 /* IssueView.swift */,
+				50EC76622ADB2A67004A14F9 /* NoIssueView.swift */,
 				501063C42AD18E1200AE10F1 /* Main.xcdatamodeld */,
-				501063C72AD191A000AE10F1 /* DataController.swift */,
 				501063B92AD1715F00AE10F1 /* Assets.xcassets */,
 				501063BB2AD1715F00AE10F1 /* UltimatePortfolio.entitlements */,
 				5037A3892AD5DB3800B3DD7F /* README.md */,
@@ -177,6 +183,8 @@
 				501063C82AD191A000AE10F1 /* DataController.swift in Sources */,
 				50813E9A2AD484FF00483464 /* SidebarView.swift in Sources */,
 				501063B82AD1715D00AE10F1 /* ContentView.swift in Sources */,
+				50EC76612ADB2A5A004A14F9 /* IssueView.swift in Sources */,
+				50EC76632ADB2A67004A14F9 /* NoIssueView.swift in Sources */,
 				50237D092AD735C300E97BC1 /* IssueRow.swift in Sources */,
 				501063B62AD1715D00AE10F1 /* UltimatePortfolioApp.swift in Sources */,
 			);
@@ -237,7 +245,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -292,7 +302,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -328,7 +340,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.zuzej.UltimatePortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,7 +382,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.zuzej.UltimatePortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";

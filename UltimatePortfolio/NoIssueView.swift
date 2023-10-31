@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct NoIssueView: View {
+    @EnvironmentObject var dataController: DataController
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("No Issue selected.")
+            .font(.title)
+            .foregroundColor(.secondary)
+        
+        Button("New Issue", action: dataController.newIssue)
     }
 }
 

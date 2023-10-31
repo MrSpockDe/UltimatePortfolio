@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension Issue {
     var issueTitle: String {
@@ -29,6 +30,27 @@ extension Issue {
     var issueTags: [Tag] {
         let result = tags?.allObjects as? [Tag] ?? []
         return result.sorted()
+    }
+    
+    var issueTagsList: String {
+        guard let tags else { return "No tags"}
+        
+        if tags.count == 0 {
+            return "No tags"
+        } else {
+            return issueTags.map(\.tagName).formatted()
+        }
+    }
+    
+    var issueStatus: some View {
+        HStack {
+            Image(systemName: completed ? "checkmark.square" : "xmark.app")
+                .foregroundStyle(completed ? .green : .red)
+                .font(.title)
+            Text(completed ? "CLOSED" : "OPEN")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+        }
     }
     
     static var example: Issue {
