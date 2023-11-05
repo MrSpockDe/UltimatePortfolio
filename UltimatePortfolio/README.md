@@ -9,4 +9,4 @@ This program can be used to collect **issues**. This does not mean, that it can 
 The program is developed on a MacBook Pro using XCode and SWIFT, including SwiftUI.
 
 ## Credits
-Thank you to Paul Hudson (twostrwas) @https://github.com/twostraws
+Thank you to Paul Hudson (twostrwas) @https://github.com/twostraws . He is the creator of the original UltimatePortfolio App, that I have adapted.
