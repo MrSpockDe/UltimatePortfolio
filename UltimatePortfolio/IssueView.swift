@@ -37,40 +37,8 @@ struct IssueView: View {
                 }
                 .pickerStyle(.segmented)
                 
-            
-                Menu {
-                    // show selected Tags first
-                   ForEach(issue.issueTags) { tag in
-                        Button {
-                            issue.removeFromTags(tag)
-                        } label: {
-                            Label(tag.tagName, systemImage: "checkmark")
-                        }
-                    }
-                    
-                    
-                    // show unselected tags
-                    let unselectedTags = dataController.missingTags(from: issue)
-                    let notEmpty = !unselectedTags.isEmpty
-                    
-                    if notEmpty {
-                        Divider()
-                        
-                        Section("Add Tags") {
-                            ForEach(unselectedTags) { tag in
-                                Button(tag.tagName) {
-                                    issue.addToTags(tag)
-                                }
-                            }
-                        }
-                        
-                    }  // endIf notEmpty
-                } label: {
-                    Text(issue.issueTagsList)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .animation(nil, value: issue.issueTagsList)
-                }
+                TagsMenuView(issue: issue)
+                
             }
             
         
@@ -88,10 +56,15 @@ struct IssueView: View {
         .onReceive(issue.objectWillChange) { _ in
             dataController.queueSave()
         }
+        .onSubmit(dataController.save)
+        .toolbar {
+            IssueViewToolbar(issue: issue)
+        }
     }
     
 }
 
 #Preview {
     IssueView(issue: .example)
+        .environmentObject(DataController(inMemory: true))
 }

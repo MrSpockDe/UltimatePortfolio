@@ -97,7 +97,7 @@ class DataController: ObservableObject {
             for j in 1...10 {
                 let issue = Issue(context: viewContext)
                 issue.title = "Issue \(i)-\(j)"
-                issue.content = "Description goes here"
+                issue.content = String(localized: "Description goes here")
                 issue.creationDate = .now
                 issue.completed = Bool.random()
                 issue.priority = Int16.random(in: 0...2)
@@ -109,6 +109,8 @@ class DataController: ObservableObject {
     }
     
     func save() {
+        saveTask?.cancel()
+        
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
         }
@@ -212,20 +214,20 @@ class DataController: ObservableObject {
         
         let allIssues = (try? container.viewContext.fetch(request)) ?? []
         
-        return allIssues.sorted()
+        return allIssues
     }
     
     func newTag() {
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
-        tag.name = "New Tag"
+        tag.name = String(localized: "New Tag")
         
         save()
     }
     
     func newIssue() {
         let issue = Issue(context: container.viewContext)
-        issue.title = "New Isuue"
+        issue.title = String(localized: "New Issue")
         issue.creationDate = .now
         issue.priority = 1
         
