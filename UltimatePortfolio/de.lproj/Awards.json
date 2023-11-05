@@ -2,7 +2,7 @@
     {
         "name": "Erster Schritt",
         "description": "Erstelle deinen ersten Beitrag.",
-        "color": "Light Blue",
+        "color": " My Light Blue",
         "criterion": "issues",
         "value": 1,
         "image": "figure.walk"
@@ -10,7 +10,7 @@
     {
         "name": "Ein starker Start",
         "description": "Füge 10 Beiträge hinzu.",
-        "color": "Light Blue",
+        "color": "My Light Blue",
         "criterion": "issues",
         "value": 10,
         "image": "hand.thumbsup.fill"
@@ -18,7 +18,7 @@
     {
         "name": "Es geht weiter aufwärts",
         "description": "Füge 20 Beiträge hinzu.",
-        "color": "Light Blue",
+        "color": "My Light Blue",
         "criterion": "issues",
         "value": 20,
         "image": "tray.and.arrow.up.fill"
@@ -26,7 +26,7 @@
     {
         "name": "Geschwindigkeit aufgenommen",
         "description": "Füge 50 Beiträge hinzu.",
-        "color": "Light Blue",
+        "color": "My Light Blue",
         "criterion": "issues",
         "value": 50,
         "image": "speedometer"
@@ -34,7 +34,7 @@
     {
         "name": "Wellen machen",
         "description": "Füge 100 Beiträge hinzu.",
-        "color": "Light Blue",
+        "color": "My Light Blue",
         "criterion": "issues",
         "value": 100,
         "image": "dot.radiowaves.left.and.right"
@@ -42,7 +42,7 @@
     {
         "name": "Top Leistung",
         "description": "Füge 250 Beiträge hinzu.",
-        "color": "Light Blue",
+        "color": "My Light Blue",
         "criterion": "issues",
         "value": 250,
         "image": "square.stack.3d.up.fill"
@@ -50,7 +50,7 @@
     {
         "name": "Leistungs Star",
         "description": "Füge 500 Beiträge hinzu.",
-        "color": "Light Blue",
+        "color": "My Light Blue",
         "criterion": "issues",
         "value": 500,
         "image": "star.circle.fill"
@@ -58,7 +58,7 @@
     {
         "name": "Leistungs Champion",
         "description": "Füge 1000 Beiträge hinzu.",
-        "color": "Light Blue",
+        "color": "My Light Blue",
         "criterion": "issues",
         "value": 1000,
         "image": "crown.fill"
@@ -66,7 +66,7 @@
     {
         "name": "Haken setzen",
         "description": "Erste Beitrag geschlossen.",
-        "color": "Green",
+        "color": "My Green",
         "criterion": "closed",
         "value": 1,
         "image": "checkmark.shield.fill"
@@ -74,7 +74,7 @@
     {
         "name": "Es rocken",
         "description": "Schließe 10 Beiträge.",
-        "color": "Green",
+        "color": "My Green",
         "criterion": "closed",
         "value": 10,
         "image": "guitars.fill"
@@ -82,7 +82,7 @@
     {
         "name": "Zwanzig ist viel",
         "description": "Schließe 20 Beiträge.",
-        "color": "Green",
+        "color": "My Green",
         "criterion": "closed",
         "value": 20,
         "image": "20.square.fill"
@@ -90,7 +90,7 @@
     {
         "name": "Bullseye!",
         "description": "Schließe 50 Beiträge.",
-        "color": "Green",
+        "color": "My Green",
         "criterion": "closed",
         "value": 50,
         "image": "target"
@@ -98,7 +98,7 @@
     {
         "name": "Fliege hoch",
         "description": "Schließe 100 Beiträge.",
-        "color": "Green",
+        "color": "My Green",
         "criterion": "closed",
         "value": 100,
         "image": "airplane.circle.fill"
@@ -106,7 +106,7 @@
     {
         "name": "Du bist on fire!",
         "description": "Schließe 250 Beiträge.",
-        "color": "Green",
+        "color": "My Green",
         "criterion": "closed",
         "value": 250,
         "image": "flame.fill"
@@ -114,7 +114,7 @@
     {
         "name": "Hakensetz-Chef",
         "description": "Schließe 500 Beiträge.",
-        "color": "Green",
+        "color": "My Green",
         "criterion": "closed",
         "value": 500,
         "image": "text.badge.checkmark"
@@ -122,7 +122,7 @@
     {
         "name": "Boom!",
         "description": "Schließe 1000 Beiträge.",
-        "color": "Green",
+        "color": "My Green",
         "criterion": "closed",
         "value": 1000,
         "image": "bolt.circle.fill"
@@ -130,7 +130,7 @@
     {
         "name": "Spiele Tag",
         "description": "Ersten Tag erstellt.",
-        "color": "Gold",
+        "color": "My Gold",
         "criterion": "tags",
         "value": 1,
         "image": "tag.fill"
@@ -138,7 +138,7 @@
     {
         "name": "Tag wrestling",
         "description": "10 Tags erstellt.",
-        "color": "Gold",
+        "color": "My Gold",
         "criterion": "tags",
         "value": 10,
         "image": "tag.circle.fill"
@@ -146,7 +146,7 @@
     {
         "name": "Überlegener Tagger.",
         "description": "50 Tags erstellt.",
-        "color": "Gold",
+        "color": "My Gold",
         "criterion": "tags",
         "value": 50,
         "image": "square.grid.3x1.folder.fill.badge.plus"
@@ -154,7 +154,7 @@
     {
         "name": "Unterstützer",
         "description": "Premium unlock gekauft.",
-        "color": "Purple",
+        "color": "My Purple",
         "criterion": "unlock",
         "value": 0,
         "image": "dollarsign.square.fill"

@@ -85,6 +85,7 @@
 			children = (
 				501063B42AD1715D00AE10F1 /* UltimatePortfolio */,
 				501063B32AD1715D00AE10F1 /* Products */,
+				50D07D1D2AF7DBC0005A8E9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +141,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		50D07D1D2AF7DBC0005A8E9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,12 +158,15 @@
 				501063AE2AD1715D00AE10F1 /* Sources */,
 				501063AF2AD1715D00AE10F1 /* Frameworks */,
 				501063B02AD1715D00AE10F1 /* Resources */,
+				50D07D242AF7E4DD005A8E9B /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = UltimatePortfolio;
+			packageProductDependencies = (
+			);
 			productName = UltimatePortfolio;
 			productReference = 501063B22AD1715D00AE10F1 /* UltimatePortfolio.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +196,8 @@
 				de,
 			);
 			mainGroup = 501063A92AD1715D00AE10F1;
+			packageReferences = (
+			);
 			productRefGroup = 501063B32AD1715D00AE10F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,6 +222,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50D07D242AF7E4DD005A8E9B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\ncd /Users/albert/XCodeProjects/UltimatePortfolio\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		501063AE2AD1715D00AE10F1 /* Sources */ = {
@@ -385,6 +420,7 @@
 				DEVELOPMENT_TEAM = MKLPQK4JX8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UltimatePortfolio/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -427,6 +463,7 @@
 				DEVELOPMENT_TEAM = MKLPQK4JX8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UltimatePortfolio/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
