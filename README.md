@@ -1,6 +1,6 @@
 # UltimatePortfolio
 
-![problem-5273058_1280](https://github.com/MrSpockDe/UltimatePortfolio/assets/5158939/0069fd8c-55d8-4f4f-b296-27df474fe6d6)
+![problem-5273058_1280](https://github.com/MrSpockDe/UltimatePortfolio/assets/5158939/b84a7a69-62ef-429a-b9d3-e2c5e042ef12)
 
 ## Purpose
 This program can be used to collect **issues**. This does not mean, that it can only be used for **issue** with the sense of a *problem*, but it can be any posting that can be considered "open" or "closed".
