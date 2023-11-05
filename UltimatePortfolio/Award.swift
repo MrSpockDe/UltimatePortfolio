@@ -15,7 +15,7 @@ struct Award: Decodable, Identifiable {
     var criterion: String
     var value: Int
     var image: String
-    
+
     static var allAwards: [Award] = Bundle.main.decode("Awards.json")
     static var example = allAwards[0]
 }

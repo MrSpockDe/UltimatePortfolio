@@ -11,10 +11,10 @@ import SwiftUI
 struct UltimatePortfolioApp: App {
     @StateObject var dataController = DataController()
     @Environment(\.scenePhase) var scenePhase
-    
+
     var body: some Scene {
         WindowGroup {
-            NavigationSplitView  {
+            NavigationSplitView {
                 SidebarView()
             } content: {
                 ContentView()
@@ -28,7 +28,6 @@ struct UltimatePortfolioApp: App {
                     dataController.save()
                 }
             }
-                
         }
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct IssueViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     @ObservedObject var issue: Issue
-    
+
     var body: some View {
         Menu {
             Button {
@@ -18,20 +18,20 @@ struct IssueViewToolbar: View {
             } label: {
                 Label("Copy Issue Title", systemImage: "doc.on.doc")
             }
-            
+
             Button {
                 issue.completed.toggle()
                 dataController.save()
             } label: {
-                Label(issue.completed ? "Re-open Isuue" : "Close Issue", systemImage: "bubble.left.and.exclamationmark.bubble.right")
+                Label(issue.completed ? "Re-open Isuue" : "Close Issue",
+                      systemImage: "bubble.left.and.exclamationmark.bubble.right")
             }
-            
+
             Divider()
-            
+
             Section("Tags") {
                 TagsMenuView(issue: issue)
             }
-            
         } label: {
             Label("Actions", systemImage: "ellipsis.circle")
         }

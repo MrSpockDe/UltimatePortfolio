@@ -26,22 +26,22 @@ extension Issue {
     var issueModificationDate: Date {
         modificationDate ?? .now
     }
-    
+
     var issueTags: [Tag] {
         let result = tags?.allObjects as? [Tag] ?? []
         return result.sorted()
     }
-    
+
     var issueTagsList: String {
         guard let tags else { return "No tags"}
-        
+
         if tags.count == 0 {
             return "No tags"
         } else {
             return issueTags.map(\.tagName).formatted()
         }
     }
-    
+
     var issueStatus: some View {
         HStack {
             Image(systemName: completed ? "checkmark.square" : "xmark.app")
@@ -52,7 +52,7 @@ extension Issue {
                 .foregroundStyle(.secondary)
         }
     }
-    
+
     static var example: Issue {
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext
@@ -67,7 +67,7 @@ extension Issue {
 }
 
 extension Issue: Comparable {
-    public static func <(lhs: Issue, rhs: Issue) -> Bool {
+    public static func < (lhs: Issue, rhs: Issue) -> Bool {
         let left = lhs.issueTitle.localizedLowercase
         let right = rhs.issueTitle.localizedLowercase
 
@@ -78,4 +78,3 @@ extension Issue: Comparable {
         }
     }
 }
-
