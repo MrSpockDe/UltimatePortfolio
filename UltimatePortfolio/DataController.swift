@@ -12,6 +12,7 @@ enum SortType: String {
     case dateModified = "modificationDate"
 }
 
+/// Stati for filtering
 enum Status {
     case all, open, closed
 }
@@ -23,13 +24,24 @@ class DataController: ObservableObject {
     /// The lone CloudKit container used to store all our data.
     let container: NSPersistentCloudKitContainer
 
+    /// Filter currently to be used when showing issues
     @Published var selectedFilter: Filter? = .all
+
+    /// currently selected issue
     @Published var selectedIssue: Issue?
 
     @Published var filterText = ""
+
+    /// filter tokens is an array containing all tags that shall be considered
+    /// when deciding whether an issue should be shown or not.
+    ///
+    /// All issues are shown that have at least one tag from that list attached.
     @Published var filterTokens = [Tag]()
 
+    /// shall selected filters be used
     @Published var filterEnabled = false
+
+    /// filter priority 0 = low, 1 = medium, 2 = high, -1 = no priority selected
     @Published var filterPriority = -1
     @Published var filterStatus = Status.all
     @Published var sortType = SortType.dateCreated
