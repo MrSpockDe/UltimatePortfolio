@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// Sidebarview presents all filters / tags and provides
+/// a transition to the Award Screen
 struct SidebarViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     @State private var showingAwards = false

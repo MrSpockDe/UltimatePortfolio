@@ -23,12 +23,15 @@ struct Filter: Identifiable, Hashable {
     }
 
     static var all = Filter(id: UUID(), name: allIssuesName, icon: "tray")
+
+    // recent shall mean "within the last 7 days"
     static var recent = Filter(
         id: UUID(),
         name: recentIssuesName,
         icon: "clock",
         minModificationDate: .now.addingTimeInterval(86400 * -7))
 
+    // defining own hay to hash data, by only using the id
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

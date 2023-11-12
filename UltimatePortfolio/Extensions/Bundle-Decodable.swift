@@ -8,6 +8,13 @@
 import Foundation
 
 extension Bundle {
+    /// the generic decode function will decode JSON data to the provided type
+    /// - Parameters:
+    ///   - file: file that contains the JSON data
+    ///   - type: type that the JSON data shall be decoded to
+    ///   - dateDecodingStrategy: how date data shall be recognized
+    ///   - keyDecodingStrategy: how keys shall be analysed
+    /// - Returns: the decoded JSON data is the type that is provided as parameter
     func decode<T: Decodable>(
         _ file: String,
         as type: T.Type = T.self,

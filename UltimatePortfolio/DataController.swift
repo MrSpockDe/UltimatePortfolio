@@ -47,6 +47,8 @@ class DataController: ObservableObject {
     @Published var sortType = SortType.dateCreated
     @Published var sortNewestFirst = true
 
+    /// the saveTask will be executet every few seconds so that
+    /// date will not be lost during long editing sessions
     private var saveTask: Task<Void, Error>?
     private var tokenSet = false
 
@@ -56,6 +58,11 @@ class DataController: ObservableObject {
         return dataController
     }()
 
+    /// tokens shall be selectable in the seach bar, this propery provides an array
+    /// of possible filter tokens, which name starts with the text entered in the
+    /// search bar
+    ///
+    /// selection whether the user uses text or tokens ist done by prefixing a #
     var suggestedFilterTokens: [Tag] {
         get {
             guard filterText.starts(with: "#") else {
@@ -67,7 +74,7 @@ class DataController: ObservableObject {
 
             if !trimmedFilterText.isEmpty {
                 request.predicate = NSPredicate(format: "name CONTAINS[c] %@", trimmedFilterText)
-                print(trimmedFilterText)
+                // print(trimmedFilterText)
             }
 
             return (try? container.viewContext.fetch(request).sorted()) ?? []
@@ -84,13 +91,25 @@ class DataController: ObservableObject {
         }
     }
 
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError("failed to locate model file")
+        }
+
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("failed to load model")
+        }
+
+        return managedObjectModel
+    }()
+
     /// Initializes a data controller, either in memory (for temporary use such as testing and previewing),
     /// or on permanent storage (for use in regular app runs.) 
     ///
     /// Defaults to permanent storage.
     /// - Parameter inMemory: Whether to store this data in temporary memory or not.
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Main")
+        container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
         // For testing and previewing purposes, we create a
         // temporary, in-memory database by writing to /dev/null
@@ -216,8 +235,11 @@ class DataController: ObservableObject {
     func issueForSelectedFilter() -> [Issue] {
         let filter = selectedFilter ?? .all
 
+        /// all predicates that Core Data shall use to query data
         var predicates = [NSPredicate]()
 
+        // filters are defined in a way that they can be based
+        // on tags or on modificationDate
         if let tag = filter.tag {
             let tagPredicate = NSPredicate(format: "tags CONTAINS %@", tag)
             predicates.append(tagPredicate)
@@ -226,6 +248,8 @@ class DataController: ObservableObject {
             predicates.append(datePredicate)
         }
 
+        // the text filter will search (caseinsensitive) for the
+        // entered text in both title and content of issues
         let trimmedFilterText = filterText.trimmingCharacters(in: .whitespaces)
 
         if !trimmedFilterText.isEmpty {
@@ -238,11 +262,15 @@ class DataController: ObservableObject {
             predicates.append(filterTextPredicate)
         }
 
+        // also tokens (in this case that are tags) can be searched for
+        // the implementetion use a logical OR to search for tags
         if !filterTokens.isEmpty {
             let tokenPredicate = NSPredicate(format: "ANY tags in %@", filterTokens)
             predicates.append(tokenPredicate)
         }
 
+        // via a dropdown menu filter priority and / or filter status
+        // (open or closed) can be added to the filter options
         if filterEnabled {
             if filterPriority >= 0 {
                 let priorityFilter = NSPredicate(format: "priority = %d", filterPriority)

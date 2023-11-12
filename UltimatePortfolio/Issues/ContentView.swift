@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+/// Contenview shows a list of all filters available, that can be applied
+/// and a search bar
+///
+/// The search bar accepts text, that will be searched in
+/// the title and description of all issues, and it will also allow
+/// to select tags (as token) thgat shall be used additionally
+/// for filtering
 struct ContentView: View {
     @EnvironmentObject var dataController: DataController
 
