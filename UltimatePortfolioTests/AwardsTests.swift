@@ -88,6 +88,7 @@ final class AwardsTests: BaseTestCase {
         for index in 0..<values.count {
             dataController.deleteAll()
             tags.removeAll()
+            var numEarned = 0
 
             for _ in 0..<values[index] {
 
@@ -101,10 +102,15 @@ final class AwardsTests: BaseTestCase {
             let numTags = dataController.count(for: Tag.fetchRequest())
             // print("numTags: \(numTags)")
             for award in awards where award.criterion == "tags" {
-                XCTAssertEqual(dataController.hasEarned(award: award),
+                let earned = dataController.hasEarned(award: award)
+                if earned {
+                    numEarned += 1
+                }
+                XCTAssertEqual(earned,
                                numTags >= award.value,
                                "award \(award.name) should be unlocked with \(award.value) issues")
             }
+            XCTAssertEqual(numEarned, index + 1, "the number of awards \(numEarned) should be \(index + 1)")
         }
     }
 }
