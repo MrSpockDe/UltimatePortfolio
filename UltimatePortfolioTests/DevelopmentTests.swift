@@ -11,16 +11,20 @@ import XCTest
 
 final class DevelopmentTests: BaseTestCase {
     func testSampleDataCreationWorks() {
+        // When
         dataController.createSampleData()
 
+        // Then
         XCTAssertEqual(dataController.count(for: Tag.fetchRequest()), 5, "Sampledata should contain 5 Tags.")
         XCTAssertEqual(dataController.count(for: Issue.fetchRequest()), 50, "Sampledata should contain 10 Issues.")
     }
 
     func testDeleteAllFunction() {
+        // When
         dataController.createSampleData()
         dataController.deleteAll()
 
+        // Then
         XCTAssertEqual(dataController.count(for: Tag.fetchRequest()), 0, "Sampledata should contain 0 Tags.")
         XCTAssertEqual(dataController.count(for: Issue.fetchRequest()), 0, "Sampledata should contain 0 Issues.")
     }
@@ -28,6 +32,7 @@ final class DevelopmentTests: BaseTestCase {
     func testRandomDataCreationTags() {
         var randomCount: Int
 
+        // When
         for _ in 1...100 {
             randomCount = Int.random(in: 0...1000)
             for _ in 0..<randomCount {
@@ -37,6 +42,7 @@ final class DevelopmentTests: BaseTestCase {
             }
             dataController.save()
             // print(randomCount)
+            // Then
             XCTAssertEqual(dataController.count(for: Tag.fetchRequest()), randomCount,
                            "There should be \(randomCount) Tags")
             dataController.deleteAll()
@@ -46,6 +52,7 @@ final class DevelopmentTests: BaseTestCase {
     func testRandomDataCreationIssues() {
         var randomCount: Int
 
+        // When
         for _ in 1...100 {
             randomCount = Int.random(in: 0...1000)
             for _ in 0..<randomCount {
@@ -54,6 +61,7 @@ final class DevelopmentTests: BaseTestCase {
             }
             dataController.save()
             // print(randomCount)
+            // Then
             XCTAssertEqual(dataController.count(for: Issue.fetchRequest()), randomCount,
                            "There should be \(randomCount) Issues")
             dataController.deleteAll()
@@ -61,14 +69,18 @@ final class DevelopmentTests: BaseTestCase {
     }
 
     func testExampleTagsHaveNoIssues() {
+        // When
         let tag = Tag.example
 
+        // Then
         XCTAssertEqual(tag.issues?.count, 0, "example tag should have no issues.")
     }
 
     func testExampleIssueIsHighPriority() {
+        // When
         let issue = Issue.example
 
+        // Then
         XCTAssertEqual(issue.priority, 2, "Example issue shall have high priority.")
     }
 }

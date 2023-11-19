@@ -10,9 +10,11 @@ import XCTest
 @testable import UltimatePortfolio
 
 final class AwardsTests: BaseTestCase {
+    // Given
     let awards = Award.allAwards
 
     func testAwardIdMatchesName() {
+        // Then
         for award in awards {
             XCTAssertEqual(award.id, award.name,
                            "Award name (\(award.name)) should match Award id (\(award.id)).")
@@ -20,15 +22,18 @@ final class AwardsTests: BaseTestCase {
     }
 
     func testNewUserHasNoAwards() {
+        // Then
         for award in awards {
             XCTAssertFalse(dataController.hasEarned(award: award), "user should not have earned award \(award.name).")
         }
     }
 
     func testCreateIssuesForAwards() {
+        // Given
         let values = [1, 10, 20, 50, 100, 250, 500, 1000]
         let awards = Award.allAwards
 
+        // When
         var issues = [Issue]()
         for index in 0..<values.count {
             dataController.deleteAll()
@@ -45,6 +50,7 @@ final class AwardsTests: BaseTestCase {
 
             let numIssues = dataController.count(for: Issue.fetchRequest())
             for award in awards where award.criterion == "issues" {
+                // Then
                 XCTAssertEqual(dataController.hasEarned(award: award),
                                numIssues >= award.value,
                                "award \(award.name) should be unlocked with \(award.value) issues")
@@ -53,9 +59,11 @@ final class AwardsTests: BaseTestCase {
     }
 
     func testCreateClosedIssuesForAwards() {
+        // Given
         let values = [1, 10, 20, 50, 100, 250, 500, 1000]
         let awards = Award.allAwards
 
+        // When
         var issues = [Issue]()
         for index in 0..<values.count {
             dataController.deleteAll()
@@ -73,6 +81,7 @@ final class AwardsTests: BaseTestCase {
 
             let numIssues = dataController.count(for: Issue.fetchRequest())
             for award in awards where award.criterion == "closed" {
+                // Then
                 XCTAssertEqual(dataController.hasEarned(award: award),
                                numIssues >= award.value,
                                "award \(award.name) should be unlocked with \(award.value) issues")
@@ -81,9 +90,11 @@ final class AwardsTests: BaseTestCase {
     }
 
     func testCreateTagsForAwards() {
+        // Given
         let values = [1, 10, 50]
         let awards = Award.allAwards
 
+        // When
         var tags = [Tag]()
         for index in 0..<values.count {
             dataController.deleteAll()
@@ -106,6 +117,7 @@ final class AwardsTests: BaseTestCase {
                 if earned {
                     numEarned += 1
                 }
+                // Then
                 XCTAssertEqual(earned,
                                numTags >= award.value,
                                "award \(award.name) should be unlocked with \(award.value) issues")

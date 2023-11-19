@@ -10,6 +10,7 @@ import XCTest
 
 final class AssetTests: XCTestCase {
     func testColorsExist() {
+        // Given
         let allColors = ["My Dark Blue",
                          "My Dark Gray",
                          "My Gold",
@@ -22,6 +23,7 @@ final class AssetTests: XCTestCase {
                          "My Purple",
                          "My Red",
                          "My Teal"]
+        // Then
         for color in allColors {
             XCTAssertNotNil(UIColor(named: color),
                             "failed to load color \(color) from asset catalog.")
@@ -29,6 +31,7 @@ final class AssetTests: XCTestCase {
     }
 
     func testAwardsLoadCorrectly() {
+        // Then
         XCTAssertTrue(!Award.allAwards.isEmpty, "Failed to load awards from JSON")
     }
 }
