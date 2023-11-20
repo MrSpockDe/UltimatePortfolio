@@ -15,37 +15,32 @@ import SwiftUI
 /// to select tags (as token) thgat shall be used additionally
 /// for filtering
 struct ContentView: View {
-    @EnvironmentObject var dataController: DataController
+    @StateObject private var viewModel: ViewModel
 
     var body: some View {
-        List(selection: $dataController.selectedIssue) {
-            ForEach(dataController.issueForSelectedFilter()) { issue in
+        List(selection: $viewModel.selectedIssue) {
+            ForEach(viewModel.dataController.issueForSelectedFilter()) { issue in
                IssueRow(issue: issue)
             }
-            .onDelete(perform: delete)
+            .onDelete(perform: viewModel.delete)
         }
         .navigationTitle("Issues")
         .searchable(
-            text: $dataController.filterText,
-            tokens: $dataController.filterTokens,
-            suggestedTokens: $dataController.suggestedFilterTokens,
+            text: $viewModel.filterText,
+            tokens: $viewModel.filterTokens,
+            suggestedTokens: $viewModel.suggestedFilterTokens,
             prompt: "Filter issues or type # to add tags") { tag in
             Text(tag.tagName)
         }
         .toolbar(content: ContentViewToolbar.init)
     }
 
-    func delete(_ offsets: IndexSet) {
-        let issues = dataController.issueForSelectedFilter()
-
-        for offset in offsets {
-            let item = issues[offset]
-            dataController.delete(item)
-        }
+    init(dataController: DataController) {
+        let viewModel = ViewModel(dataController: dataController)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 }
 
 #Preview {
-    ContentView()
-        .environmentObject(DataController(inMemory: true))
+    ContentView(dataController: DataController.preview)
 }
