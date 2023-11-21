@@ -429,6 +429,16 @@
         }
       }
     },
+    "No tags" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Tags"
+          }
+        }
+      }
+    },
     "OK" : {
       "localizations" : {
         "de" : {

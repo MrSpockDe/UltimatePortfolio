@@ -33,10 +33,11 @@ extension Issue {
     }
 
     var issueTagsList: String {
-        guard let tags else { return "No tags"}
+        let noTag = String(localized: "No tags")
+        guard let tags else { return noTag }
 
         if tags.count == 0 {
-            return "No tags"
+            return noTag
         } else {
             return issueTags.map(\.tagName).formatted()
         }
