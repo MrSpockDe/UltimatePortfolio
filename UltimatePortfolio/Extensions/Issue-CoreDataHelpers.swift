@@ -43,6 +43,11 @@ extension Issue {
         }
     }
 
+    var issueReminderTime: Date {
+        get { reminderTime ?? .now }
+        set { reminderTime = newValue}
+    }
+
     var issueStatus: some View {
         HStack {
             Image(systemName: completed ? "checkmark.square" : "xmark.app")

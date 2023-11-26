@@ -35,6 +35,9 @@
 		50A3DA942B0BE4E80021A468 /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DA932B0BE4E80021A468 /* SidebarViewModel.swift */; };
 		50A3DA962B0BF1290021A468 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DA952B0BF1290021A468 /* ContentViewModel.swift */; };
 		50A3DA982B0BF4EB0021A468 /* IssueRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DA972B0BF4EB0021A468 /* IssueRowViewModel.swift */; };
+		50CF885D2B1145EB007DA335 /* DataController-Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CF885C2B1145EB007DA335 /* DataController-Notifications.swift */; };
+		50DFF11A2B127AD600CF4EA5 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFF1192B127AD600CF4EA5 /* DataController-StoreKit.swift */; };
+		50DFF11D2B12948600CF4EA5 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFF11C2B12948600CF4EA5 /* StoreView.swift */; };
 		50E3C63E2B00067C00A893E9 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3C63D2B00067C00A893E9 /* AssetTests.swift */; };
 		50E3C6402B00CFE300A893E9 /* TagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3C63F2B00CFE300A893E9 /* TagTests.swift */; };
 		50E3C6422B00D83100A893E9 /* AwardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E3C6412B00D83100A893E9 /* AwardsTests.swift */; };
@@ -99,6 +102,10 @@
 		50A3DA932B0BE4E80021A468 /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		50A3DA952B0BF1290021A468 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		50A3DA972B0BF4EB0021A468 /* IssueRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRowViewModel.swift; sourceTree = "<group>"; };
+		50CF885C2B1145EB007DA335 /* DataController-Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Notifications.swift"; sourceTree = "<group>"; };
+		50DFF1182B1278A500CF4EA5 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = file; name = Configuration.storekit; path = UltimatePortfolio/Configuration/Configuration.storekit; sourceTree = SOURCE_ROOT; };
+		50DFF1192B127AD600CF4EA5 /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
+		50DFF11C2B12948600CF4EA5 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		50E3C63D2B00067C00A893E9 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		50E3C63F2B00CFE300A893E9 /* TagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTests.swift; sourceTree = "<group>"; };
 		50E3C6412B00D83100A893E9 /* AwardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsTests.swift; sourceTree = "<group>"; };
@@ -148,7 +155,6 @@
 				50F5EF102AFFD59D00A0148F /* UltimatePortfolioTests */,
 				50F50CFD2B0A65080021535F /* UltimatePortfolioUITests */,
 				501063B32AD1715D00AE10F1 /* Products */,
-				50D07D1D2AF7DBC0005A8E9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +171,7 @@
 		501063B42AD1715D00AE10F1 /* UltimatePortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				50DFF11B2B12946200CF4EA5 /* Store */,
 				50F5EF072AFFAFD200A0148F /* Filters */,
 				50F5EF082AFFAFDB00A0148F /* Issues */,
 				50F5EF092AFFAFE300A0148F /* Editing */,
@@ -173,7 +180,9 @@
 				50F5EF052AFFACE600A0148F /* Localization */,
 				50F5EF062AFFAD0E00A0148F /* Configuration */,
 				501063B52AD1715D00AE10F1 /* UltimatePortfolioApp.swift */,
+				50DFF1192B127AD600CF4EA5 /* DataController-StoreKit.swift */,
 				501063C72AD191A000AE10F1 /* DataController.swift */,
+				50CF885C2B1145EB007DA335 /* DataController-Notifications.swift */,
 				507126602AF43D6100D7BDF0 /* Colors.xcassets */,
 				501063B92AD1715F00AE10F1 /* Assets.xcassets */,
 				501063BC2AD1715F00AE10F1 /* Preview Content */,
@@ -189,11 +198,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		50D07D1D2AF7DBC0005A8E9B /* Frameworks */ = {
+		50DFF11B2B12946200CF4EA5 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				50DFF11C2B12948600CF4EA5 /* StoreView.swift */,
 			);
-			name = Frameworks;
+			path = Store;
 			sourceTree = "<group>";
 		};
 		50F50CF12B0A2DAD0021535F /* Fixtures */ = {
@@ -237,6 +247,7 @@
 			children = (
 				501063C92AD1A3F900AE10F1 /* Info.plist */,
 				501063C42AD18E1200AE10F1 /* Main.xcdatamodeld */,
+				50DFF1182B1278A500CF4EA5 /* Configuration.storekit */,
 				501063BB2AD1715F00AE10F1 /* UltimatePortfolio.entitlements */,
 			);
 			path = Configuration;
@@ -474,6 +485,8 @@
 				507928F32AF7AA9200F046BB /* IssueViewToolbar.swift in Sources */,
 				507928F92AF7B25C00F046BB /* SmartFilterRow.swift in Sources */,
 				5071265F2AF432C400D7BDF0 /* AwardsView.swift in Sources */,
+				50DFF11A2B127AD600CF4EA5 /* DataController-StoreKit.swift in Sources */,
+				50CF885D2B1145EB007DA335 /* DataController-Notifications.swift in Sources */,
 				50237D072AD724AF00E97BC1 /* Tag-CoreDataHelpers.swift in Sources */,
 				501063C62AD18E1200AE10F1 /* Main.xcdatamodeld in Sources */,
 				50237D052AD7240A00E97BC1 /* Issue-CoreDataHelpers.swift in Sources */,
@@ -491,6 +504,7 @@
 				50EC76632ADB2A67004A14F9 /* NoIssueView.swift in Sources */,
 				50237D092AD735C300E97BC1 /* IssueRow.swift in Sources */,
 				501063B62AD1715D00AE10F1 /* UltimatePortfolioApp.swift in Sources */,
+				50DFF11D2B12948600CF4EA5 /* StoreView.swift in Sources */,
 				50A3DA982B0BF4EB0021A468 /* IssueRowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

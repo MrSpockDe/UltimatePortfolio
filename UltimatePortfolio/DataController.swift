@@ -25,6 +25,9 @@ class DataController: ObservableObject {
     /// The lone CloudKit container used to store all our data.
     let container: NSPersistentCloudKitContainer
 
+    /// spotlite search enabling
+    var spotlightDelegate: NSCoreDataCoreSpotlightDelegate?
+
     /// Filter currently to be used when showing issues
     @Published var selectedFilter: Filter? = .all
 
@@ -48,10 +51,17 @@ class DataController: ObservableObject {
     @Published var sortType = SortType.dateCreated
     @Published var sortNewestFirst = true
 
+    /// storeTask shall be called as soon as possible
+    private var storeTask: Task<Void, Never>?
     /// the saveTask will be executet every few seconds so that
     /// date will not be lost during long editing sessions
     private var saveTask: Task<Void, Error>?
     private var tokenSet = false
+
+    /// User Defaults suite where we are saving  user data
+    ///
+    /// To prevent hidden dependencies
+    let defaults: UserDefaults
 
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
@@ -109,9 +119,14 @@ class DataController: ObservableObject {
     ///
     /// Defaults to permanent storage.
     /// - Parameter inMemory: Whether to store this data in temporary memory or not.
-    init(inMemory: Bool = false) {
+    /// - Parameter defaults: The UserDefaults Suite where user data should be stored
+    init(inMemory: Bool = false, defaults: UserDefaults = .standard) {
+        self.defaults = defaults
         container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
+        storeTask = Task {
+            await monitorTransactions()
+        }
         // For testing and previewing purposes, we create a
         // temporary, in-memory database by writing to /dev/null
         // so our data is destroyed after the app finishes running.
@@ -135,13 +150,25 @@ class DataController: ObservableObject {
             queue: .main,
             using: remoteStoreChanged)
 
-        container.loadPersistentStores { _, error in
+        container.loadPersistentStores { [weak self] _, error in
             if let error {
                 fatalError("Fatal error loading srtore: \(error.localizedDescription)")
             }
+
+            if let description = self?.container.persistentStoreDescriptions.first {
+                description.setOption(true as NSNumber,
+                                      forKey: NSPersistentHistoryTrackingKey)
+
+                if let coordinator = self?.container.persistentStoreCoordinator {
+                    self?.spotlightDelegate = NSCoreDataCoreSpotlightDelegate(
+                        forStoreWith: description,
+                        coordinator: coordinator)
+                    self?.spotlightDelegate?.startSpotlightIndexing()
+                }
+            }
             #if DEBUG
             if CommandLine.arguments.contains("enable-testing") {
-                self.deleteAll()
+                self?.deleteAll()
                 UIView.setAnimationsEnabled(false)
             }
             #endif
@@ -299,12 +326,21 @@ class DataController: ObservableObject {
         return allIssues
     }
 
-    func newTag() {
+    func newTag() -> Bool {
+        var shouldCreate = fullVersionUnlocked
+        if !shouldCreate {
+            shouldCreate = count(for: Tag.fetchRequest()) < 3
+        }
+        guard shouldCreate else {
+            return false
+        }
+
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
         tag.name = String(localized: "New Tag")
 
         save()
+        return true
     }
 
     func newIssue() {
@@ -319,9 +355,7 @@ class DataController: ObservableObject {
         if let tag = selectedFilter?.tag {
             issue.addToTags(tag)
         }
-
         save()
-
         selectedIssue = issue
     }
 
@@ -351,5 +385,16 @@ class DataController: ObservableObject {
             // fatalError("unknown award criteria of \(award.criterion)")
             return false
         }
+    }
+
+    /// find the issue that is provided as url from spotlight
+    func issue(with uniqueIdentifier: String) -> Issue? {
+        guard let url = URL(string: uniqueIdentifier) else {
+            return nil
+        }
+        guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url) else {
+            return nil
+        }
+        return try? container.viewContext.existingObject(with: id) as?  Issue
     }
 }

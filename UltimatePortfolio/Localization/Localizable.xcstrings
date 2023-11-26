@@ -158,12 +158,25 @@
         }
       }
     },
+    "Buy Now" : {
+
+    },
     "Cancel" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abbruch"
+          }
+        }
+      }
+    },
+    "Check settings" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Überprüfe die Einstellungen"
           }
         }
       }
@@ -459,6 +472,16 @@
         }
       }
     },
+    "Ooops!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oha!"
+          }
+        }
+      }
+    },
     "Open" : {
       "localizations" : {
         "de" : {
@@ -489,7 +512,7 @@
         }
       }
     },
-    "Re-open Isuue" : {
+    "Re-open Issue" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -506,6 +529,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Neueste Beiträge"
+          }
+        }
+      }
+    },
+    "Reminder time" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erinnerung Zeitpunkt"
+          }
+        }
+      }
+    },
+    "Reminders" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erinnerung"
           }
         }
       }
@@ -536,6 +579,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zeige Auszeichnungen"
+          }
+        }
+      }
+    },
+    "Show reminder" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeige Erinnerung"
           }
         }
       }
@@ -586,6 +639,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tags"
+          }
+        }
+      }
+    },
+    "There was a problem setting your notification. Plese check you have notifications enabled." : {
+      "comment" : "There was a problem",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Problem ist aufgetreten als die Benachrichtigung aktiviert werden sollte. Prüfe, ob Benachrichtigungen erlaubt sind."
           }
         }
       }

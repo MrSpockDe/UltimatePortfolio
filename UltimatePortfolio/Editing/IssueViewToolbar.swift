@@ -22,7 +22,7 @@ struct IssueViewToolbar: View {
             }
 
             Button(action: toogleComplete) {
-                Label(issue.completed ? "Re-open Isuue" : "Close Issue",
+                Label(issue.completed ? "Re-open Issue" : "Close Issue",
                       systemImage: "bubble.left.and.exclamationmark.bubble.right")
             }
 
