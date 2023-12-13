@@ -158,9 +158,6 @@
         }
       }
     },
-    "Buy Now" : {
-
-    },
     "Cancel" : {
       "localizations" : {
         "de" : {
@@ -301,6 +298,16 @@
         }
       }
     },
+    "Fetching offers ..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hole Angebote ..."
+          }
+        }
+      }
+    },
     "Filter" : {
       "localizations" : {
         "de" : {
@@ -331,6 +338,33 @@
         }
       }
     },
+    "Get access to the full app." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voller Zugriff auf die komplette App."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get access to the full app."
+          }
+        }
+      }
+    },
+    "Get the most out of our app" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Holen Sie das Beste aus unserer App."
+          }
+        }
+      }
+    },
     "High" : {
       "localizations" : {
         "de" : {
@@ -347,6 +381,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Priorität hoch"
+          }
+        }
+      }
+    },
+    "In-app purchases are disabled." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In-app Käufe sind deaktiviert"
           }
         }
       }
@@ -573,6 +617,16 @@
         }
       }
     },
+    "Restore Purchases" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käufe wiederherstellen"
+          }
+        }
+      }
+    },
     "Show awards" : {
       "localizations" : {
         "de" : {
@@ -599,6 +653,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smarte Filter"
+          }
+        }
+      }
+    },
+    "Sorry, there was an error. Try again later." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entschuldigung, ein Fehler ist aufgetreten. Versuchen Sie es später noch einmal."
           }
         }
       }
@@ -664,6 +728,16 @@
         }
       }
     },
+    "Try Again" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nochmal versuchen"
+          }
+        }
+      }
+    },
     "Turn Filter Off" : {
       "localizations" : {
         "de" : {
@@ -700,6 +774,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Freigeschaltet: %@"
+          }
+        }
+      }
+    },
+    "Upgrade today!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade jetzt!"
+          }
+        }
+      }
+    },
+    "You can't purchase the premium unlock, because ia-app purchases are disabled on this device.\n\nPlease ask whomever manages your device for assistance." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sie können premium unlock nicht kaufen, da in-app Käufe auf Ihrem Gerät deaktiviert sind. \n\nBitte fragen Sie den Geräteadministrator um Hilfe."
           }
         }
       }

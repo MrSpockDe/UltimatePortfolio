@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import StoreKit
 import SwiftUI
 
 enum SortType: String {
@@ -62,6 +63,9 @@ class DataController: ObservableObject {
     ///
     /// To prevent hidden dependencies
     let defaults: UserDefaults
+
+    /// The StoreKit Products we have loaded from the Store.
+    @Published var products = [Product]()
 
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
@@ -213,7 +217,6 @@ class DataController: ObservableObject {
 
     func queueSave() {
         saveTask?.cancel()
-
         saveTask = Task { @MainActor in
             try await Task.sleep(for: .seconds(3))
             save()
@@ -256,7 +259,6 @@ class DataController: ObservableObject {
     func missingTags(from issue: Issue) -> [Tag] {
         let request = Tag.fetchRequest()
         let allTags = (try? container.viewContext.fetch(request)) ?? []
-
         let allTagsSet = Set(allTags)
         let difference = allTagsSet.symmetricDifference(issue.issueTags)
 
@@ -316,7 +318,6 @@ class DataController: ObservableObject {
                 predicates.append(statusFilter)
             }
         }
-
         let request = Issue.fetchRequest()
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
         request.sortDescriptors = [NSSortDescriptor(key: sortType.rawValue, ascending: sortNewestFirst)]
@@ -334,7 +335,6 @@ class DataController: ObservableObject {
         guard shouldCreate else {
             return false
         }
-
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
         tag.name = String(localized: "New Tag")
@@ -369,18 +369,17 @@ class DataController: ObservableObject {
             let fetchRequest = Issue.fetchRequest()
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
-
         case "closed":
             let fetchRequest = Issue.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "completed = true")
             let closedCount = count(for: fetchRequest)
             return closedCount >= award.value
-
         case "tags":
             let fetchRequest = Tag.fetchRequest()
             let tagCount = count(for: fetchRequest)
             return tagCount >= award.value
-
+        case "unlock":
+            return fullVersionUnlocked
         default:
             // fatalError("unknown award criteria of \(award.criterion)")
             return false

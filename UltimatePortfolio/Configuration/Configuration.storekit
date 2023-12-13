@@ -13,6 +13,11 @@
           "description" : "Get access to the full app.",
           "displayName" : "Premium Unlock",
           "locale" : "en_US"
+        },
+        {
+          "description" : "Voller Zugriff auf die komplette App.",
+          "displayName" : "Premium Unlock",
+          "locale" : "de"
         }
       ],
       "productID" : "de.zuzej.UltimatePortfolio.premiumUnlock",
@@ -21,10 +26,16 @@
     }
   ],
   "settings" : {
+    "_askToBuyEnabled" : true,
     "_failTransactionsEnabled" : false,
+    "_locale" : "de",
+    "_storefront" : "DEU",
     "_storeKitErrors" : [
       {
-        "current" : null,
+        "current" : {
+          "index" : 2,
+          "type" : "generic"
+        },
         "enabled" : false,
         "name" : "Load Products"
       },
